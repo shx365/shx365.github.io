@@ -1,0 +1,171 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>验证三角形内角和 | 数学实验室</title>
+<link rel="shortcut icon" href="https://shx365.github.io/favicon.ico?v=1684646633968">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://shx365.github.io/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="验证三角形内角和 | 数学实验室 - Atom Feed" href="https://shx365.github.io/atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+
+    <meta name="description" content="撕纸法验证三角形内角和
+
+UEsDBBQACAgIALWFZlYAAAAAAAAAAAAAAAASAAAAZ2VvZ2VicmFfbWFjcm8ueG1s7ZhPb+Q0FMDPu5/C8gGBaDOOk0yS0nRVVkK7UrtFbIV..." />
+    <meta name="keywords" content="" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.5.1/build/highlight.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://shx365.github.io">
+  <img class="avatar" src="https://shx365.github.io/images/avatar.png?v=1684646633968" alt="">
+  </a>
+  <h1 class="site-title">
+    数学实验室
+  </h1>
+  <p class="site-description">
+    互联网下的动态数学研究
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              验证三角形内角和
+            </h2>
+            <div class="post-info">
+              <span>
+                2023-03-06
+              </span>
+              <span>
+                2 min read
+              </span>
+              
+            </div>
+            
+            <div class="post-content-wrapper">
+              <div class="post-content" v-pre>
+                <p>撕纸法验证三角形内角和</p>
+<div id="ggb1" style="height:600px; width:700px; font-size:0">
+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
+</div>
+<script src="https://cdn.geogebra.org/apps/deployggb.js"></script>
+<script src="https://kz16.top/geogebra/ggbmd.js"></script>
+              </div>
+              <div class="toc-container">
+                
+              </div>
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://shx365.github.io/post/ba-nian-ji-pei-you-5/">
+              <h3 class="post-title">
+                八年级培优5
+              </h3>
+            </a>
+          </div>
+        
+
+        
+
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+  <a class="rss" href="https://shx365.github.io/atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
+</div>
+
+      </div>
+    </div>
+
+    <script>
+      hljs.initHighlightingOnLoad()
+
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
+
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
+
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
+
+    </script>
+  </body>
+</html>
